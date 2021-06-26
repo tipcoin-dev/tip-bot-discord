@@ -68,3 +68,15 @@ deprecatedrpc=accounts
 ```
 bundle exec ruby main.rb
 ```
+
+or use Docker
+
+```
+docker compose run --build
+```
+
+or
+
+```
+docker run -d --env-file ./.env --network host --restart unless-stopped --name tip-bot-discord ghcr.io/tipcoin-dev/tip-bot-discord:latest
+```

@@ -1,0 +1,17 @@
+version: '3.3'
+
+networks:
+  tipcoin:
+
+services:
+  bot:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: bundle exec ruby main.rb
+    env_file:
+      - .env
+    volumes:
+      - .:/opt/app
+    networks:
+      - tipcoin
